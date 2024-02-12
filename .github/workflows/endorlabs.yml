@@ -51,4 +51,4 @@ jobs:
             scan_dependencies: "true"
             scan_secrets: "true"
             scan_git_logs: "true"
-            additional_args: "--as-default-branch --api=${{ github.event.inputs.api }}"
+            additional_args: "--as-default-branch --api=${{ github.event.inputs.api }} --languages=scala"
