@@ -44,7 +44,7 @@ lazy val root = (project in file(".")).aggregate(client, spark, server)
 
 lazy val client = (project in file("client")) settings(
   name := "delta-sharing-client",
-  crossScalaVersions := Seq(scala212, scala213),
+  crossScalaVersions := Seq(scala212),
   commonSettings,
   scalaStyleSettings,
   releaseSettings,
@@ -71,7 +71,7 @@ lazy val client = (project in file("client")) settings(
 
 lazy val spark = (project in file("spark")) dependsOn(client) settings(
   name := "delta-sharing-spark",
-  crossScalaVersions := Seq(scala212, scala213),
+  crossScalaVersions := Seq(scala212),
   commonSettings,
   scalaStyleSettings,
   releaseSettings,
